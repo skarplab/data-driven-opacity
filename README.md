@@ -1,3 +1,5 @@
-A Pen created at CodePen.io. You can find this one at https://codepen.io/maptastik/pen/JvXJWJ.
+# Data-Driven Opacity
 
- 
+A common issue in the use of choropleth map is that large areas have a large visual weight that is frequently out of proportion with their contribution to the phenomenon under inspection. This simple app is a demonstration of the data-driven opacity capabilities in the ArcGIS JS API 4.x.
+
+In this demo map, we initially see the total score of some demo data from the EBPA Level of Service model. It displays that raw total for each polygon without any consideration of the population that lives in the polygon. As such, if a parks department is interested in locating parks both where there is poor level of service and a large concentration of population that could be served by that park, the inital map is not great. By using population density values for each to dictate opacity, where low density Blocks are nearly transparent and high density Blocks are fully opaque, new patterns arise from the data that might help stakeholders make better informed decisions about where to add a new park.
