@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>ArcGIS JS API: Data-Driven Opacity</title>
+  <script>
+    var dojoConfig = {
+      has: {
+        "esri-featurelayer-webgl": 1
+      }
+    };
+  </script>
+
+  <link rel='stylesheet prefetch' href='https://js.arcgis.com/4.6/esri/css/main.css'>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="viewDiv"></div>
+  <div id="button-container">
+    <button id="renderer-button">Use Population Density as a Visual Variable</button>
+  </div>
+
+  <script type="text/plain" id="pop-density">
+    var population = $feature.POP;
+    var acres = $feature.Shape__Area / 43560;
+    var density = population / acres;
+    return density;
+  </script>
+  <script src='https://js.arcgis.com/4.6/'></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
